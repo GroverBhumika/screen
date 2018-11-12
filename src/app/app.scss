@@ -1,0 +1,299 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+/**************App Font Code**************/
+
+@font-face {
+    font-family: 'nunito-bold';
+    src: url('../assets/fonts/nunito-bold.woff');
+  }
+  @font-face {
+    font-family: 'nunito-extrabold';
+    src: url('../assets/fonts/nunito-extrabold.woff');
+  }
+
+  @font-face {
+    font-family: 'nunito-regular';
+    src: url('../assets/fonts/nunito-regular.woff');
+  }
+  @font-face {
+    font-family: 'raleway-bold';
+    src: url('../assets/fonts/raleway-bold.woff');
+  }
+  *{
+    font-family: 'nunito-regular';
+  }
+  .button{
+    font-family: 'nunito-bold';
+  }
+/***************Input Code***************/
+.input_main{
+.item:first-child,.item:last-child {
+    border: none;
+}
+.item .item-inner {
+    border: none !important;
+    padding-left: 50px;
+}
+.item {
+    background: #f6f4f4;
+    border: 1px solid #b1a7a7 !important;
+    padding: 0;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+}
+
+/*************Blank_Bg Code***********/
+
+.blank_bg{
+
+    .toolbar-background {
+        background: transparent !important;
+    }
+
+    .back-button {
+        color: #434343;
+        position: absolute;
+        z-index: 999;
+    }
+    &::after{
+        background: none !important;
+    }
+    .toolbar-background{
+        background: transparent !important;
+        border-width: 0 !important;
+    }
+
+}
+
+.blank_gap0{
+
+    .scroll-content{
+        margin-top:0 !important;
+    }
+
+}
+
+/*************Header Code***********/
+
+.alert-title {
+    font-family: 'nunito-bold';
+    color: #252525;
+}
+
+.alert-message {
+    color: #a3a3a3 !important;
+}
+
+.header{
+    .toolbar-ios {
+        min-height: 64px !important;
+    }
+    .back-button {
+        color: #fff;
+        position: absolute;
+        z-index: 999;
+    }
+    .back-button-ios {
+        top:24px;
+    }
+    .toolbar-background{
+        background: #87be46 !important;
+    }
+    .title-ios{
+        padding: 15px 90px 1px !important;
+        min-height: 64px !important;
+    }
+    .title-md{
+        padding: 0px 90px 1px !important;
+    }
+    .toolbar-title{
+        text-align: center;
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 22px;
+    }
+    .back-button{
+        color: #fff;
+    }
+    .search {
+        right:50px !important;
+        .bar-button{
+            color: #fff;
+        }
+    }
+    .cart {
+        right: 10px !important;
+        .bar-button{
+            color: #fff;
+        }
+    }
+    .bar-buttons-md{
+        position: absolute;
+        top:0px;
+        bottom: 0;
+        margin: auto;
+        left: 0;
+        color: #fff;
+        height: 30px;
+        z-index: 999;
+    }    
+    .bar-buttons-ios{
+        position: absolute;
+        top:15px;
+        bottom: 0;
+        margin: auto;
+        left: 0;
+        color: #fff;
+        height: 30px;
+        z-index: 999;
+    }
+    p {
+        position: absolute;
+        right: -8px;
+        bottom: 0;
+        border: 1px solid #6aad1c;
+        padding: 5px 0;
+        border-radius: 50px;
+        min-width: 22px;
+        height: 22px;
+        font-size: 12px;
+        background: #fff;
+        color: #87be46;
+        top: -17px;
+        font-family: 'nunito-bold';
+        text-align: center;
+    }
+}
+.blank_bg{
+    .back-button {
+        color: #87be46 !important;
+        position: absolute;
+        z-index: 999;
+    }
+    .toolbar-background{
+        background: transparent !important;
+    }
+}
+
+/************Footer Code***********/
+
+
+
+.footer{
+    .toolbar-background{
+        background: #eb8029 !important;
+    }
+    .toolbar-title{
+        text-align: center;
+        color: #fff !important;
+        text-transform: capitalize;
+        font-family: 'nunito-bold';
+    }
+}
+
+
+
+/************Side Menu Code***************/
+.menu_box{
+.toolbar-content-ios{
+    .lang_box {
+        width: 70%;
+        display: block;
+        margin: 0 auto 22px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+.toolbar-ios{
+    height: 240px;
+}
+}
+.menu_main {
+    margin-top: 5px;
+    width: 100%;
+    display: block;
+
+    img {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 6px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.label {
+    padding-left: 50px !important;
+    position: relative;
+    text-transform: capitalize;
+    color: #252525;
+    font-family: 'nunito-bold';
+    margin: 0;
+    padding: 21px 0;
+}
+
+
+}
+.lang_box {
+    width: 70%;
+    display: block;
+    margin: 0 auto 20px;
+.lang {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 6px;
+    height: 40px;
+    margin: 0;
+}
+.button:last-child {
+    float: right;
+}
+}
+
+.img_main {
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    border: 1px solid #fff;
+
+    img {
+    width: 100%;
+}
+
+}
+
+.menu-inner{
+    .toolbar,.title{
+        min-height: 170px !important;
+    }
+    .toolbar-title{
+        padding: 0;
+        text-transform: capitalize;
+    }
+
+    .list > .item-block:first-child,.list > .item-block:last-child{
+        border: none;
+    }
+}

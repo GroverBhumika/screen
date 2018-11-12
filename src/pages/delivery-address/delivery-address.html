@@ -1,0 +1,63 @@
+<!--
+  Generated template for the DeliveryAddressPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>billing details</ion-title>
+  </ion-navbar>
+
+  <ion-buttons end class="cart" (click)="addaddress()">
+      <button ion-button icon-only clear class="bar-button">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+
+</ion-header>
+
+
+<ion-content class="main_box" style="background: #f6f6f6;">
+
+  <h2>select a delivery address</h2>
+
+  <ion-list radio-group>
+    
+
+      <div class="box">
+              <label>Sunny Mehra</label>
+              <p>Industrail area 8b,d-185,near<br />
+                sbi bank office no,12b ,abc<br />
+                  technologies,mohali ,punjab<br />
+                  14500 ,mob -9478040806</p>
+                  <button ion-button clear>edit</button>
+              <ion-radio value="cordnnn"></ion-radio>
+      </div>
+
+      <div class="box">
+          <label>Mahesh Chandar</label>
+          <p>Industrail area 8b,d-185,near<br />
+            sbi bank office no,12b ,abc<br />
+              technologies,mohali ,punjab<br />
+              14500 ,mob -9478040806</p>
+              <button ion-button clear>edit</button>
+          <ion-radio value="cord"></ion-radio>
+  </div>
+    
+
+    
+    </ion-list>
+
+</ion-content>
+
+
+<!-- <ion-footer (click)="delivery_address()"> -->
+
+    <ion-footer (click)="confirm_order()">
+    <ion-toolbar>
+      <ion-title>continue</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+

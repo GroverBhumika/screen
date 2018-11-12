@@ -1,0 +1,78 @@
+<ion-header>
+    <button ion-button icon-only menuToggle start clear>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+  <ion-navbar hideBackButton>
+    <ion-title>sereen</ion-title>
+
+    <ion-buttons end class="cart" (click)="cart()">
+        <button ion-button icon-only>
+            <ion-icon name="cart"></ion-icon>
+            <p>0</p>
+        </button>
+      </ion-buttons>
+
+    <ion-buttons end class="search">
+        <button ion-button icon-only (click)="show = !show">
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content padding>
+        <ion-searchbar *ngIf="show" [@enterAnimation] 
+        [(ngModel)]="myInput"
+        [showCancelButton]="shouldShowCancel"
+        (ionInput)="onInput($event)"
+        (ionCancel)="onCancel($event)">
+      </ion-searchbar>
+  <div class="listing">
+      <ion-list>
+          <button ion-item *ngFor="let cat of category" (click)="selected(cat)">
+          {{cat.name}} 
+          <img [src]="cat.image">
+          </button>  
+        </ion-list>
+
+        <!-- <ion-list>
+            <button ion-item>
+           Mother and Baby  
+            <img src="assets/imgs/2.png">
+            </button>  
+          </ion-list>
+
+          <ion-list>
+              <button ion-item>
+                  Makeup’s and Beauty 
+              <img src="assets/imgs/3.png">
+              </button>  
+            </ion-list>
+
+            <ion-list>
+                <button ion-item>
+               Man
+                <img src="assets/imgs/4.png">
+                </button>  
+              </ion-list>
+
+              <ion-list>
+                  <button ion-item>
+                 women
+                  <img src="assets/imgs/5.png">
+                  </button>  
+                </ion-list>
+
+                <ion-list>
+                    <button ion-item>
+                   Health and skin care
+                    <img src="assets/imgs/6.png">
+                    </button>  
+                  </ion-list> -->
+  </div>
+  
+</ion-content>
+.

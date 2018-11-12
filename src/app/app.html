@@ -1,0 +1,59 @@
+<ion-menu [content]="content">
+    <ion-header class="menu_box">
+      <ion-toolbar>
+        <ion-title>
+            <div class="img_main">
+                <img src="assets/imgs/pick.png">
+            </div>
+            user name</ion-title>
+
+            <div class="lang_box">
+            <button ion-button outline class="lang">English</button>
+            <button ion-button outline class="lang">Arabic</button>
+            </div>
+
+      </ion-toolbar>
+    </ion-header>
+  
+    <ion-content>
+      <ion-list class="menu_main">
+         
+        <button menuClose ion-item *ngFor="let page of pages" (click)="openPage(page)">
+        <img [src]="page.icon">
+        {{page.title}}      
+        </button>
+  
+        <!-- <button menuClose ion-item (click)="history()">
+        <img src="assets/imgs/order.png">
+        my order           
+        </button>
+  
+        <button menuClose ion-item (click)="home()">
+        <img src="assets/imgs/order_category.png">
+        order by category             
+        </button>
+  
+        <button menuClose ion-item (click)="cart()">
+        <img src="assets/imgs/cart.png">
+        cart           
+        </button>
+  
+        <button menuClose ion-item (click)="contact()">
+        <img src="assets/imgs/contact.png">
+        contact us           
+        </button> -->
+  
+        <button menuClose ion-item (click)="logout()">
+        <img src="assets/imgs/logout.png">
+        Logout         
+        </button>
+  
+  
+  
+      </ion-list>
+    </ion-content>
+  
+  </ion-menu>
+  
+  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

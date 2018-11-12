@@ -1,0 +1,45 @@
+<!--
+  Generated template for the PaymentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>payment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="main_box" style="background: #f6f6f6;">
+
+    <h2 class="heading">payment method</h2>
+
+    <ion-list radio-group>
+    
+
+        <div class="box">
+                <img src="assets/imgs/paypal.png">
+                <ion-radio value="Master Card"></ion-radio>
+        </div>
+  
+        <div class="box">
+            <img src="assets/imgs/cod.png">
+            <ion-radio value="billing cheque"></ion-radio>
+    </div>
+      
+  
+      
+      </ion-list>
+
+</ion-content>
+
+
+<ion-footer (click)="delivery_method()">
+    <ion-toolbar>
+      <ion-title>continue</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+

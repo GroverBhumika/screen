@@ -1,0 +1,77 @@
+<!--
+  Generated template for the ConfirmOrderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>order</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="main_box" style="background: #f6f6f6;">
+
+    <h2 class="heading">confirm order</h2>
+
+    <ion-list class="product">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img SRc="assets/imgs/product.png">
+          </ion-thumbnail>
+          <h2>Jos-Pan Syrup 100ml</h2>
+          
+          <span class="quantity">quantity : <span>1</span></span>
+          <span class="price">Price : <span>SR145</span></span>
+             
+        </ion-item>
+      </ion-list>
+
+      <div style="height:5vh;float:left;width:100%;"></div>
+      
+    <h2 class="heading1">delivery address</h2>
+      <div class="box">
+          <label>Sunny Mehra</label>
+          <p>Industrail area 8b,d-185,near<br />
+            sbi bank office no,12b ,abc<br />
+              technologies,mohali ,punjab<br />
+              14500 ,mob -9478040806</p>
+              <button ion-button clear>edit</button>
+  </div>
+  
+  <div style="height:2vh;float:left;width:100%;"></div>
+  <h2 class="heading1">payment detail</h2>
+
+  <div class="total">
+   <ul>
+     <li>
+       <h4>unit price</h4>
+       <h4>SR 124.00</h4>
+    </li>
+    <li>
+      <h4>total price</h4>
+      <h4>SR 564.00</h4>
+   </li>
+   <li>
+     <h4>shipping price</h4>
+     <h4>SR 24.00</h4>
+  </li>
+  <li>
+    <h4>grand total</h4>
+    <h4>SR 444.00</h4>
+ </li>
+   </ul>
+  </div>
+
+</ion-content>
+
+
+<ion-footer (click)="payment()">
+    <ion-toolbar>
+      <ion-title>confirm order</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+

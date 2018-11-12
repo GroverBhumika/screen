@@ -1,0 +1,77 @@
+<!--
+  Generated template for the BillingDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>billing detail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="form">
+
+  <h2>personal information</h2>
+    <ion-item>
+        <ion-label color="primary" fixed>Full Name</ion-label>
+        <ion-input type="text" placeholder="Enter Name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" fixed>Phone Number</ion-label>
+        <ion-input type="number" placeholder="Enter Number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" fixed>E-mail</ion-label>
+        <ion-input type="email" placeholder="Enter E-mail"></ion-input>
+      </ion-item>
+      
+  <h2>shipping address</h2>
+    <ion-item>
+        <ion-label>Country</ion-label>
+        <ion-select>
+          <ion-option value="i">India</ion-option>
+          <ion-option value="a">America</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>Region</ion-label>
+          <ion-select>
+            <ion-option value="h">Hindu</ion-option>
+            <ion-option value="p">Punjabi</ion-option>
+          </ion-select>
+        </ion-item>
+        
+    <ion-item>
+        <ion-label>City</ion-label>
+        <ion-select>
+          <ion-option value="p">Punjab</ion-option>
+          <ion-option value="c">Chandigarh</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+          <ion-label color="primary" fixed>Address Line</ion-label>
+          <ion-input type="text" placeholder="Enter Address"></ion-input>
+  </ion-item>
+
+          <ion-item>
+          <ion-label color="primary" fixed>Zip Code</ion-label>
+          <ion-input type="number" placeholder="Enter Zip Code"></ion-input>
+        </ion-item>
+
+</ion-content>
+
+
+
+<ion-footer (click)="delivery_address()">
+    <ion-toolbar>
+      <ion-title>continue</ion-title>
+    </ion-toolbar>
+  </ion-footer>

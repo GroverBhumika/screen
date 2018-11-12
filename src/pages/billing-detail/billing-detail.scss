@@ -1,0 +1,39 @@
+page-billing-detail {
+
+    .form{
+        h2 {
+            color: #252525;
+            font-family: 'nunito-bold';
+            text-transform: capitalize;
+            font-size: 20px;
+            padding: 0 15px;
+            margin-top: 30px;
+        }
+        
+        ion-item {
+            padding: 0;
+        
+            .item-inner {
+            border-top: 2px solid rgba(17, 17, 17, 0.04) !important;
+            border-bottom: none !important;
+            padding: 8px 15px !important;
+        
+            ion-label {
+            min-width: 120px;
+            color: #252525;
+            font-family: 'nunito-bold';
+        }
+        ion-input{
+             .text-input {
+            text-align: right;
+            color: #252525;
+        }
+        }
+        
+        }
+        
+        }
+        
+        }
+
+}

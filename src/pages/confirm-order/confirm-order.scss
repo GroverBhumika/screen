@@ -1,0 +1,161 @@
+page-confirm-order {
+
+    .heading {
+        background: #fff;
+        padding: 15px;
+        text-transform: capitalize;
+        text-align: left;
+        font-size: 20px;
+        font-family: 'nunito-bold';
+        border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+        border-top: 2px solid rgba(0, 0, 0, 0.06);
+        margin-bottom: 35px;
+    }
+
+    .product {
+        margin: 0;
+        padding: 0;
+        .grid {
+            width: 64%;
+            margin: 0;
+            padding: 0;
+    }
+    .item {
+        padding: 0;
+        border:none !important;
+        .label {
+            margin: 13px 4px 13px 0;
+            display: flex;
+            flex-direction: column;
+            h2 {
+                font-size: 17px;
+                margin: 0;
+                font-family: 'nunito-bold';
+                color: #252525;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .quantity {
+                color: #252525;
+                font-family: 'nunito-regular';
+                margin: 10px 0 0 0;
+                font-size: 15px;
+                text-transform: capitalize;         
+                span{                    
+                font-family: 'nunito-bold';
+                }     
+            }
+            .price {
+                color: #252525;
+                font-family: 'nunito-regular';
+                margin: 10px 0 0 0;
+                font-size: 15px;
+                text-transform: capitalize;      
+                span{                    
+                font-family: 'nunito-bold';
+                }    
+            }
+            .button {
+                align-self: flex-end;
+                background: #87be46;
+                padding: 2px 12px;
+                text-transform: capitalize;
+                font-size: 15px;
+                min-height: 32px;
+                border-radius: 50px;
+        }
+        }
+    }
+    
+
+    }
+    .heading1{
+        padding: 15px;
+        text-transform: capitalize;
+        text-align: left;
+        font-size: 18px;
+        font-family: 'nunito-bold';
+        margin:0;
+    }
+
+    .box {
+        position: relative;
+        background: #fff;
+        padding: 15px;
+        margin-bottom: 20px;
+
+        button {
+            height: 15px !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            text-transform: capitalize !important;
+            color: #f79320 !important;
+        }
+    
+    label {
+        font-size: 18px;
+        font-family: 'nunito-bold';
+        color: #252525;
+    }
+    
+    p {
+        font-size: 13px;
+        color: #929292;
+        margin-top: 5px;
+    }
+    
+    
+    }
+
+
+
+    .total {
+        width: 100%;
+        background: #fff;
+        margin-bottom: 20px;
+    }
+    
+    .total ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    
+    .total ul li {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+        text-transform: capitalize;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 2px 15px;
+    }
+    
+    .total ul li h4 {
+        font-size: 16px;
+    }
+    
+    .total ul li h4:last-child {
+        text-align: right;
+        width: 50%;
+    }
+    
+    .total ul li h4:first-child {
+        float: left;
+        width: 50%;
+    }
+    
+    .total ul li:last-child h4:first-child {
+        font-family: 'nunito-bold';
+    }
+    
+    .total ul li:last-child h4:last-child {
+        font-family: 'nunito-bold';
+        text-transform: uppercase;
+    }
+    
+    .total ul li:last-child {
+        border: none;
+    }
+
+
+}

@@ -1,0 +1,7 @@
+{
+  "name": "sereen",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

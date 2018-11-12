@@ -1,0 +1,79 @@
+page-payment {
+
+    .heading {
+        background: #fff;
+        padding: 15px;
+        text-transform: capitalize;
+        text-align: left;
+        font-size: 20px;
+        font-family: 'nunito-bold';
+        border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+        border-top: 2px solid rgba(0, 0, 0, 0.06);
+        margin-bottom: 35px;
+    }
+
+    .box {
+        position: relative;
+        padding-right: 80px !important;
+        background: #fff;
+        padding: 15px;
+        margin-bottom: 20px;
+        img{
+            width:150px;
+        }
+
+    .radio-icon{
+        width:18px;
+        height: 18px;
+    }
+    
+    ion-radio.radio-md {
+        position: absolute;
+        right: 35px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 20px;
+        height: 20px;
+    }
+    ion-radio.radio-ios {
+        position: absolute;
+        right: 35px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 22px;
+        height: 22px;
+    }
+    
+    ion-radio.radio-ios{
+        .radio-icon {
+        border: 2px solid #87be46;
+        width: 22px;
+        height: 22px;
+        border-radius: 50px;
+        .radio-inner {
+        background-color: transparent;
+        border-color: #87be46;
+        top: 2px;
+        left: 6px;
+    }
+    }
+    }
+    ion-radio.radio-md{
+        .radio-icon {
+        border-color: #87be46;
+        width: 20px;
+        height: 20px;
+        .radio-inner {
+        background-color: #87be46;
+        top: 4px;
+        left: 4px;
+    }
+    }
+    }
+    
+    
+    }
+
+}

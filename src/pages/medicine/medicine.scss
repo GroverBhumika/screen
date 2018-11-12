@@ -1,0 +1,33 @@
+page-medicine {
+
+    .listing{
+    .item {
+        border-top: 0 !important;
+        border-bottom: 0 !important;
+        padding: 0;
+        min-height: 58px;
+        .item-inner {
+            padding: 0 15px !important;
+            background: none !important;
+            ion-label {
+                color: #87be46;
+                font-family: 'raleway-bold';
+                font-size: 17px;
+                position: relative;
+                margin: 0;
+                .icon {
+                    position: absolute;
+                    top: -2px;
+                    margin: auto;
+                    right: 0px;
+                    z-index: 999;
+                    color: #b9b9b9;
+                }
+            }
+        }
+    }
+    
+    
+}
+
+}

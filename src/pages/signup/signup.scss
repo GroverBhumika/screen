@@ -1,0 +1,140 @@
+page-signup {
+
+.content1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    h3 {
+        text-align: center;
+        font-size: 35px;
+        font-family: 'nunito-bold';
+        text-transform: capitalize;
+    }
+    .locate {
+        left: unset !important;
+        right: 20px;
+        color: #f77373 !important;
+    }
+
+    
+.list {
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+    .button {
+        padding: 0 30px;
+        height: 4.4rem;
+        text-transform: capitalize;
+        font-size: 18px;
+        border-radius: 4px;
+        background: #87be46;
+        font-weight: bold;
+        margin: 10px auto 30px;
+        display: block;
+        font-family: 'nunitobold';
+    }
+
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+a {
+    font-size: 17px;
+    color: #5b5b5b;
+    text-transform: capitalize;
+}
+
+.or {
+    font-size: 22px;
+    position: relative;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #252525;
+}
+
+.or:after {
+    content: '';
+    width: 130px;
+    height: 1px;
+    background: #ddd;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.or:before {
+    content: '';
+    width: 130px;
+    height: 1px;
+    background: #ddd;
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.sign_up {
+    margin: 0 !important;
+    font-size: 17px !important;
+a {
+        color: #eb8029 !important;
+        font-weight: bold;
+    }
+}
+}
+
+.icn_box {
+    width: 100%;
+    position: relative;
+    .icon {
+        position: absolute;
+        z-index: 1;
+        top: 12px;
+        margin: auto;
+        height: 19px;
+        font-size: 22px;
+        left: 20px;
+        color: #87be46;
+    }
+    .error {
+        width: auto;
+        position: absolute;
+        bottom: -17px;
+        color: #f00;
+    }
+}
+
+}
+
+.box{
+    .item{
+        .item-inner {
+            padding: 0;
+        }
+    }
+    .checkbox {
+        margin-right: 10px !important;
+    }
+
+.item-inner {
+    padding-left: 0;
+}
+
+.item {
+    border: none !important;
+    background: transparent;
+    margin-bottom: 0;
+    width: 292px;
+    text-align: left;
+}
+}
+
+
+}
