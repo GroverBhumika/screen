@@ -7,17 +7,17 @@
         </button>
         </ion-buttons>
   
-      <ion-title>Analgesics and Headache</ion-title>
+      <ion-title>{{'Products' | translate}}</ion-title>
   
       <ion-buttons end class="cart" (click)="cart()">
           <button ion-button icon-only>
               <ion-icon name="cart"></ion-icon>
-              <p>0</p>
+              <p>{{cartitems}}</p>
           </button>
         </ion-buttons>
   
       <ion-buttons end class="search">
-          <button ion-button icon-only>
+          <button ion-button icon-only (click)="show = !show">
             <ion-icon name="search"></ion-icon>
           </button>
         </ion-buttons>
@@ -26,16 +26,20 @@
   </ion-header>
   
   <ion-content padding>
-  
+      <ion-searchbar *ngIf="show" [@enterAnimation] 
+      [(ngModel)]="query"
+      [showCancelButton]="shouldShowCancel"
+      (ionCancel)="onCancel($event)">
+    </ion-searchbar>
       <ion-list class="product">
-          <ion-item>
-            <ion-thumbnail item-start (click)="productdetail()">
-              <img src="assets/imgs/product.png">
+          <ion-item *ngFor="let product of products | searchText:query">
+            <ion-thumbnail item-start (click)="productdetail(product.product_id)">
+              <img [src]="product.thumb">
             </ion-thumbnail>
-            <h2 (click)="productdetail()">Jos-Pan Syrup 100ml</h2>
-            <span class="quantity">Quantity : <span>2</span></span>
-            <span class="price">$145</span>
-            <button ion-button>add to cart</button>
+            <h2 (click)="productdetail(product.product_id)">{{product.name}}</h2>
+            <span class="quantity">{{'Quantity' | translate}} : <span>{{product.minimum}}</span></span>
+            <span class="price">{{product.price}}</span>
+            <button ion-button (click)="addCart(product)">{{'add to cart' | translate}}</button>
   
             <!-- <ion-grid item-end>
                 <ion-row>
@@ -55,38 +59,12 @@
             
           </ion-item>
         </ion-list>
-  
-        <!-- <ion-list class="product">
-            <ion-item>
-              <ion-thumbnail item-start (click)="productdetail()">
-                <img src="assets/imgs/product.png">
-              </ion-thumbnail>
-              <h2 (click)="productdetail()"> Analgesics and Headache</h2>
-              <span class="quantity">Quantity : <span>10</span></span>
-              <span class="price">$74</span>
-              <button ion-button>add to cart</button>
-    
-              <ion-grid item-end>
-                  <ion-row>
-                    <ion-col col-12>
-                        <button ion-button><ion-icon name="add"></ion-icon></button>
-                    </ion-col>
-                    <ion-col col-12>
-                        <ion-item>
-                            <ion-input type="text" value="0"></ion-input>
-                          </ion-item>
-                    </ion-col>
-                    <ion-col col-12>
-                        <button ion-button><ion-icon name="remove"></ion-icon></button>
-                    </ion-col>
-                  </ion-row>
-                </ion-grid>
-              
-            </ion-item>
-          </ion-list> -->
-  
-          
           <!-- <button ion-button class="add" (click)="add()"><ion-icon name="add"></ion-icon></button> -->
-
+          <ion-infinite-scroll *ngIf="products?.length>9" (ionInfinite)="doInfinite($event)">
+            <ion-infinite-scroll-content
+              loadingSpinner="bubbles"
+              loadingText="Loading more data...">
+            </ion-infinite-scroll-content>
+          </ion-infinite-scroll>
   </ion-content>
   

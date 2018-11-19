@@ -8,7 +8,7 @@
 
   <ion-navbar>
     <ion-title hidden>login</ion-title>
-    <ion-buttons end> <button ion-button (click)="skip()"> Skip </button> </ion-buttons>
+    <ion-buttons end> <button ion-button (click)="skip()"> {{'Skip' | translate}} </button> </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -19,46 +19,46 @@
     <img src="assets/imgs/logo1.png">
   </div>
   <div class="content1">
-    <h3>login</h3>
+    <h3>{{'Login' | translate}}</h3>
 <form #signin="ngForm" novalidate novalidate>
     <ion-list class="input_main">
 
       <div class="icn_box">
         <ion-item>
-          <ion-input type="text"  placeholder="Email Address"  [(ngModel)]="data.email" name="email" #email="ngModel" required></ion-input>
+          <ion-input type="text"  placeholder="{{'Email Address' | translate}}"  [(ngModel)]="data.email" name="email" #email="ngModel" required></ion-input>
         </ion-item>
         <!-- <span item-content *ngIf="!isValid('fname')" class="validationpop animated bounce">Firstname required.</span> -->
         <ion-icon name="at"></ion-icon>
         <div *ngIf="email.errors && (email.dirty || email.touched)" class="error">
           <div [hidden]="!email.errors.required">
-           Email is Mandatory!
+           {{'Email is Mandatory!' | translate}}
            </div>
         </div>
       </div>
       
       <div class="icn_box">
         <ion-item>
-          <ion-input type="password" placeholder="Password"  [(ngModel)]="data.password" name="password" #password="ngModel" required></ion-input>
+          <ion-input type="password" placeholder="{{'Password' | translate}}"  [(ngModel)]="data.password" name="password" #password="ngModel" required></ion-input>
         </ion-item>
         <ion-icon name="lock"></ion-icon>
         <div *ngIf="password.errors && (password.dirty || password.touched)" class="error">
           <div [hidden]="!password.errors.required">
-            Password is Mandatory!
+           {{'Password is Mandatory!' | translate}}
            </div>
         </div>
       </div>
 
-        <button ion-button large (click)="submit()" [disabled]="!signin.form.valid">sign in</button>
+        <button ion-button large (click)="submit()" [disabled]="!signin.form.valid">{{'sign in' | translate}}</button>
       
       </ion-list>
       </form>
   
 
       <div class="box">
-      <a (click)="forgot()">forgot password?</a>
-      <span class="or">or</span>
-      <span class="sign_up">Sign In as a <a (click)="home()">guest</a></span>
-      <span class="sign_up">Don’t have an account ? <a (click)="signup()">Sign Up</a></span>
+      <a (click)="forgot()">{{'forgot password?' | translate}}</a>
+      <span class="or">{{'or' | translate}}</span>
+      <span class="sign_up">{{'Sign In as a' | translate}} <a (click)="home()">{{'guest' | translate}}</a></span>
+      <span class="sign_up">{{'Don’t have an account ?'| translate}} <a (click)="signup()">{{'Sign Up' | translate}}</a></span>
       </div>
 
       <div style="height:5vh;float:left;width:100%;"></div>

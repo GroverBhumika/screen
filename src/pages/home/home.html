@@ -3,12 +3,12 @@
         <ion-icon name="menu"></ion-icon>
     </button>
   <ion-navbar hideBackButton>
-    <ion-title>sereen</ion-title>
+    <ion-title>{{ 'Sereen' | translate }}</ion-title>
 
     <ion-buttons end class="cart" (click)="cart()">
         <button ion-button icon-only>
             <ion-icon name="cart"></ion-icon>
-            <p>0</p>
+            <p>{{cartitems}}</p>
         </button>
       </ion-buttons>
 
@@ -24,15 +24,24 @@
 
 
 <ion-content padding>
+        <ion-refresher (ionRefresh)="doRefresh($event)">
+                <ion-refresher-content
+                  pullingIcon="arrow-dropdown"
+                  pullingText="Pull to refresh"
+                  refreshingSpinner="circles"
+                  refreshingText="Refreshing...">
+                </ion-refresher-content>
+              </ion-refresher>
+        <!-- <button ion-button (click)="changeLanguage('ar')">{{ 'HOME.TITLE' | translate }}</button>
+        <button ion-button (click)="changeLanguage('en')">{{ 'HOME.TITLE' | translate }}</button> -->
         <ion-searchbar *ngIf="show" [@enterAnimation] 
-        [(ngModel)]="myInput"
+        [(ngModel)]="query"
         [showCancelButton]="shouldShowCancel"
-        (ionInput)="onInput($event)"
         (ionCancel)="onCancel($event)">
       </ion-searchbar>
   <div class="listing">
       <ion-list>
-          <button ion-item *ngFor="let cat of category" (click)="selected(cat)">
+          <button ion-item *ngFor="let cat of category | searchText:query" (click)="selected(cat)">
           {{cat.name}} 
           <img [src]="cat.image">
           </button>  

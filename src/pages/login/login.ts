@@ -5,6 +5,8 @@ import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms'
 import { UserProvider } from '../../providers/user/user';
 import { map } from 'rxjs/operator/map';
 import { HomePage } from '../home/home';
+import { ForgotPage } from '../forgot/forgot';
+import { SignupPage } from '../signup/signup';
 
 /**
  * Generated class for the LoginPage page.
@@ -54,17 +56,18 @@ export class LoginPage {
   }
   skip(){
     this.events.publish('skip','skip');
+    this.navCtrl.setRoot(HomePage);
   }
   forgot() {
-    this.navCtrl.setRoot('ForgotPage');
+    this.navCtrl.setRoot(ForgotPage);
   }
 
   signup() {
-    this.navCtrl.setRoot('SignupPage');
+    this.navCtrl.setRoot(SignupPage);
   }
 
   home() {
-    this.navCtrl.setRoot('HomePage');
+    this.navCtrl.setRoot(HomePage);
   }
 
 }

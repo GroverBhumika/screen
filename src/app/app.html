@@ -5,11 +5,12 @@
             <div class="img_main">
                 <img src="assets/imgs/pick.png">
             </div>
-            user name</ion-title>
+           {{currentUser.firstname}} {{currentUser.lastname}}
+          </ion-title>
 
             <div class="lang_box">
-            <button ion-button outline class="lang">English</button>
-            <button ion-button outline class="lang">Arabic</button>
+            <button ion-button outline class="lang" (click)='changeLanguage("en")'>{{ 'English' | translate }}</button>
+            <button ion-button outline class="lang" (click)='changeLanguage("ar")'>{{ 'Arabic' | translate }}</button>
             </div>
 
       </ion-toolbar>
@@ -20,7 +21,7 @@
          
         <button menuClose ion-item *ngFor="let page of pages" (click)="openPage(page)">
         <img [src]="page.icon">
-        {{page.title}}      
+        {{page.title | translate}}      
         </button>
   
         <!-- <button menuClose ion-item (click)="history()">
@@ -43,10 +44,14 @@
         contact us           
         </button> -->
   
-        <button menuClose ion-item (click)="logout()">
+        <button menuClose ion-item *ngIf="loggedin == true" (click)="logout()">
         <img src="assets/imgs/logout.png">
-        Logout         
+         {{'Logout' | translate}} 
         </button>
+        <button menuClose ion-item *ngIf="loggedin == false" (click)="login()">
+          <img src="assets/imgs/logout.png">
+          {{'Login' | translate}} 
+          </button>
   
   
   

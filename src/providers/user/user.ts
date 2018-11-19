@@ -62,6 +62,20 @@ export class UserProvider {
   }
 
   /*
+  Change language
+  */
+ changelanguage(lcode){
+  let data = new FormData()
+  data.append("code", lcode);
+  return fetch(this.url + '/language/set', {
+    method: "POST",
+    body: data,
+    credentials: 'include'
+  }).then(response => response.json()).catch(error => {
+    console.log(error);
+  })
+ }
+  /*
   common toast function
   */
   presentToast(msg, duration, position) {

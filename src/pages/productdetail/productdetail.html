@@ -7,40 +7,35 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>medicine</ion-title>
+    <ion-title>{{detail.heading_title}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content style="background-color: #f5f5f5">
-    <ion-slides pager class="slider">
-
-        <ion-slide style="background-color: #f5f5f5">
-          <img src="assets/imgs/product2.png">
+    <ion-slides pager class="slider" *ngIf="detail?.images?.length>0">
+        <ion-slide style="background-color: #f5f5f5" *ngFor="let slide of detail.images">
+          <img [src]="slide.preview">
         </ion-slide>
-      
-        <ion-slide style="background-color: #f5f5f5">
-            <img src="assets/imgs/product2.png">
-        </ion-slide>
-      
-        <ion-slide style="background-color: #f5f5f5">
-            <img src="assets/imgs/product2.png">
-        </ion-slide>
-      
       </ion-slides>
+      <ion-slides pager class="slider" *ngIf="detail?.images?.length == 0">
+          <ion-slide style="background-color: #f5f5f5">
+              <img src="assets/imgs/no-image.jpg">
+          </ion-slide>
+        </ion-slides>
 
       <div padding class="content1">
-      <span class="sub_heading">Analgesics and Headache</span>
-      <h1>Jos-Pan Syrup 100ml</h1>
-      <span class="price">$180</span>
+      <!-- <span class="sub_heading">Analgesics and Headache</span> -->
+      <h1>{{detail.heading_title}}</h1>
+      <span class="price">{{detail.price}}</span>
 
      <div class="quantity">
         <ion-grid item-end>
         
             <ion-row>
                 <ion-col col-4>
-                   <label>quantity</label>
+                   <label>{{'Quantity' | translate}}</label>
                 </ion-col>
               <ion-col col-2>
                   <button ion-button><ion-icon name="add"></ion-icon></button>
@@ -57,14 +52,15 @@
           </ion-grid>
      </div>
 
-      <span class="sub_heading">Analgesics and Headache</span>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      <h4 style="font-weight: 600;">{{'Desciption' | translate}}</h4>
+      <div [innerHTML]="detail.description"></div>
+      <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p> -->
 
       </div>
 </ion-content>
 
 <ion-footer>
     <ion-toolbar>
-      <ion-title>add to cart</ion-title>
+      <ion-title>{{'add to cart' | translate}}</ion-title>
     </ion-toolbar>
   </ion-footer>

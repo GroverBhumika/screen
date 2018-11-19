@@ -13,97 +13,97 @@
   <div style="height:3vh;width:100%;float:left;"></div>
 
   <div class="content1">
-    <h3>sign up</h3>
+    <h3>{{'Sign Up' | translate}}</h3>
     <form [formGroup]="SignupForm" (submit)="submit(SignupForm)">
     <!-- <form #heroForm="ngForm" novalidate> -->
       <ion-list class="input_main">
 
         <div class="icn_box">
           <ion-item>
-            <ion-input type="text" placeholder="First Name*" formControlName="fname"></ion-input>
+            <ion-input type="text" placeholder="{{'First Name*' | translate}}" formControlName="fname"></ion-input>
           </ion-item>
           <ion-icon name="person"></ion-icon>
-          <div *ngIf="!isValid('fname')" class="error">First Name is Mandatory!</div>
+          <div *ngIf="!isValid('fname')" class="error">{{'First Name is Mandatory!' | translate}}</div>
         </div>
         <div class="icn_box">
           <ion-item>
-            <ion-input type="text" placeholder="Last Name*" formControlName="lastname"></ion-input>
+            <ion-input type="text" placeholder="{{'Last Name*' | translate}}" formControlName="lastname"></ion-input>
           </ion-item>
           <ion-icon name="person"></ion-icon>
-          <div *ngIf="!isValid('lastname')" class="error">Last Name is Mandatory!</div>
+          <div *ngIf="!isValid('lastname')" class="error">{{'Last Name is Mandatory!' | translate}}</div>
         </div>
         <div class="icn_box">
           <ion-item>
-            <ion-input type="email" placeholder="Email Address*" formControlName="email"></ion-input>
+            <ion-input type="email" placeholder="{{'Email Address*' | translate}}" formControlName="email"></ion-input>
           </ion-item>
           <ion-icon name="at"></ion-icon>
-          <div *ngIf="!isValid('email')" class="error">Invalid email</div>
+          <div *ngIf="!isValid('email')" class="error">{{'Invalid email' | translate}}</div>
         </div>
         <div class="icn_box">
           <ion-item>
-            <ion-input type="tel" placeholder="Phone Number*" formControlName="phnnumber" maxlength="12"></ion-input>
+            <ion-input type="tel" placeholder="{{'Phone Number*' | translate}}" formControlName="phnnumber" maxlength="12"></ion-input>
           </ion-item>
           <ion-icon name="call"></ion-icon>
-          <div *ngIf="!isValid('phnnumber')" class="error">Phone Number is Mandatory!</div>
+          <div *ngIf="!isValid('phnnumber')" class="error">{{'Phone Number is Mandatory!' | translate}}</div>
         </div>
         <div class="icn_box">
           <ion-item>
-            <ion-input type="password" placeholder="Password*" formControlName="password"></ion-input>
+            <ion-input type="password" placeholder="{{'Password*' | translate}}" formControlName="password"></ion-input>
           </ion-item>
           <ion-icon name="person"></ion-icon>
-          <div *ngIf="!isValid('password')" class="error">Password is Mandatory!</div>
+          <div *ngIf="!isValid('password')" class="error">{{'Password is Mandatory!' | translate}}</div>
         </div>
         <div class="icn_box">
           <ion-item>
-            <ion-input type="password" placeholder="Confirm password*" formControlName="cpassword"></ion-input>
+            <ion-input type="password" placeholder="{{'Confirm password*' | translate}}" formControlName="cpassword"></ion-input>
           </ion-item>
           <ion-icon name="person"></ion-icon>
           <!-- <div *ngIf="!isValid('cpassword')" class="error">Confirm Password is Mandatory!</div> -->
           <div  class="error" *ngIf="SignupForm.controls.cpassword.touched">
-            <div *ngIf="SignupForm.hasError('mismatchedPasswords')">Passwords do not match.</div>
+            <div *ngIf="SignupForm.hasError('mismatchedPasswords')">{{'Passwords do not match.' | translate}}</div>
           </div>
         </div>
         <div class="icn_box">
           <ion-item>
-            <ion-input type="text" placeholder="Address 1*" formControlName="address"></ion-input>
+            <ion-input type="text" placeholder="{{'Address 1*' | translate}}" formControlName="address"></ion-input>
           </ion-item>
           <ion-icon name="pin"></ion-icon>
-          <div *ngIf="!isValid('address')" class="error">Address is Mandatory!</div>
+          <div *ngIf="!isValid('address')" class="error">{{'Address is Mandatory!' | translate}}</div>
         </div>
         <div class="icn_box">
           <ion-item>
-            <ion-input type="text" placeholder="Address 2*" formControlName="addresss"></ion-input>
+            <ion-input type="text" placeholder="{{'Address 2*' | translate}}" formControlName="addresss"></ion-input>
           </ion-item>
           <ion-icon name="pin"></ion-icon>
-          <div *ngIf="!isValid('addresss')" class="error">Address is Mandatory!</div>
+          <div *ngIf="!isValid('addresss')" class="error">{{'Address is Mandatory!' | translate}}</div>
         </div>
         <div class="icn_box">
           <ion-item>
-            <ion-input type="tel" placeholder="Post Code*" formControlName="PostCode"></ion-input>
+            <ion-input type="tel" placeholder="{{'Post Code*' | translate}}" formControlName="PostCode"></ion-input>
           </ion-item>
           <ion-icon name="person"></ion-icon>
-          <div *ngIf="!isValid('PostCode')" class="error">Postal Code is Mandatory!</div>
+          <div *ngIf="!isValid('PostCode')" class="error">{{'Postal Code is Mandatory!' | translate}}</div>
         </div>
         <div class="icn_box">
           <ion-item>
-            <ion-input type="text" placeholder="City*" formControlName="City"></ion-input>
+            <ion-input type="text" placeholder="{{'City*' | translate}}" formControlName="City"></ion-input>
           </ion-item>
           <ion-icon name="person"></ion-icon>
-          <div *ngIf="!isValid('City')" class="error">City is Mandatory!</div>
+          <div *ngIf="!isValid('City')" class="error">{{'City is Mandatory!' | translate}}</div>
         </div>
         <div class="icn_box">
           <ion-item>
-            <ion-input type="text" placeholder="Country*" formControlName="ccode"></ion-input>
+            <ion-input type="text" placeholder="{{'Country*' | translate}}" formControlName="ccode"></ion-input>
           </ion-item>
           <ion-icon name="person"></ion-icon>
-          <div *ngIf="!isValid('ccode')" class="error">Country is Mandatory!</div>
+          <div *ngIf="!isValid('ccode')" class="error">{{'Country is Mandatory!' | translate}}</div>
         </div>
         <div class="icn_box">
           <ion-item>
-            <ion-input type="text" placeholder="Region / State*" formControlName="Region"></ion-input>
+            <ion-input type="text" placeholder="{{'Region / State*' | translate}}" formControlName="Region"></ion-input>
           </ion-item>
           <ion-icon name="person"></ion-icon>
-          <div *ngIf="!isValid('Region')" class="error">Region is Mandatory!</div>
+          <div *ngIf="!isValid('Region')" class="error">{{'Region is Mandatory!' | translate}}</div>
         </div>
         
         <!-- <div class="icn_box">
@@ -254,13 +254,13 @@
  -->
         <div class="box">
           <ion-item>
-            <ion-label>I agree the Terms and Conditions</ion-label>
+            <ion-label>{{'I agree the Terms and Conditions' | translate}}</ion-label>
             <ion-checkbox color="dark" formControlName="agree"></ion-checkbox>
           </ion-item>
-          <button ion-button large [disabled]="!SignupForm.valid" type="submit">sign up</button>
+          <button ion-button large [disabled]="!SignupForm.valid" type="submit">{{'Sign Up' | translate}}</button>
 
-          <span class="sign_up">Already have an account?
-            <a (click)="login()">Sign In</a>
+          <span class="sign_up">{{'Already have an account?' | translate}}
+            <a (click)="login()">{{'sign in' | translate}}</a>
           </span>
         </div>
 
